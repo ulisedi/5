@@ -1,20 +1,50 @@
 package ejes5_2;
 
-public class Vehiculos {
+public abstract class Vehiculos {
 
-    int  veiculosCreados;
-    int kmTotales;
-  
+    
+    private static int veiculosCreados;
+    private static int kmTotales;
+    private int kmRecorrido;
+//////////////////////
+public Vehiculos() {
+    this.kmRecorrido = 0;
+    Vehiculos.veiculosCreados++;
+}
 
-  
-    // cuando se llame al veiculo Saldra con este formato:
-    // public String toString() {
-    //     String cadena;
-    //     cadena = "-------------------------\n";
-    //     cadena += "Propietario: " + this.propietario + "\n";
-    //     cadena += "Modelo: " + this.modelo + "\n";
-    //     cadena += "Matricula: " + this.matricula;
-    //     return cadena;
-    // }
+
+////////////////////////
+
+    public static int getVeiculosCreados() {
+        return veiculosCreados;
+    }
+
+    public static void setVeiculosCreados(int veiculosCreados) {
+        Vehiculos.veiculosCreados = veiculosCreados;
+    }
+
+    public static int getKmTotales() {
+        return kmTotales;
+    }
+
+    public static void setKmTotales(int kmTotales) {
+        Vehiculos.kmTotales = kmTotales;
+    }
+
+    public int getKmRecorrido() {
+        return kmRecorrido;
+    }
+
+    public void setKmRecorrido(int kmRecorrido) {
+        this.kmRecorrido = kmRecorrido;
+    }
+
+    public void anda(int km) {
+      
+        this.kmRecorrido += km;
+        Vehiculos.kmTotales += km;
+    }
+
+    
 
 }
