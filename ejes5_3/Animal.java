@@ -9,7 +9,6 @@ public abstract class Animal {
         CARNE, PLANTAS, OMNI
     }
 
-    private String nombre;
     private int peso;
     private int edad;
     private Sexo sexo;
@@ -20,6 +19,7 @@ public abstract class Animal {
     ///////////////
 
     public Animal() {
+
         sexo = Sexo.MACHO;
         edad = 0;
         peso = 0;
@@ -42,14 +42,6 @@ public abstract class Animal {
 
     public void setAlim(Alim alim) {
         this.alim = alim;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public int getPeso() {

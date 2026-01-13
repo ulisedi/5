@@ -5,6 +5,15 @@ import java.util.Scanner;
 public abstract class Mamifero extends Animal {
     Scanner s = new Scanner(System.in);
 
+    //////
+    public Mamifero() {
+        super();
+    }
+    public Mamifero(Sexo s, int e, int p, Alim a) {
+        super(s, e, p, a);
+    }
+
+    ////
     public void amamantar() {
 
         if (this.getSexo() == Sexo.HEMBRA) {
@@ -52,6 +61,7 @@ public abstract class Mamifero extends Animal {
             System.out.println("3. Carne");
             System.out.println("4. Fruta");
             System.out.println("5. Salir");
+            System.out.println("--------------");
 
             try {
                 eleccion = s.nextInt();
@@ -61,7 +71,7 @@ public abstract class Mamifero extends Animal {
             }
             switch (eleccion) {
                 case 1:
-                    if (this.getAlim() == Alim.CARNE && this.getAlim() == Alim.OMNI) {
+                    if (this.getAlim() == Alim.CARNE || this.getAlim() == Alim.OMNI) {
                         System.out.println("Comible pero, ¡que asco!");
                     } else {
                         System.out.println("Yo no puedo comer eso soy: " + this.getAlim());
@@ -76,7 +86,7 @@ public abstract class Mamifero extends Animal {
                     }
                     break;
                 case 3:
-                    if (this.getAlim() == Alim.CARNE && this.getAlim() == Alim.OMNI) {
+                    if (this.getAlim() == Alim.CARNE || this.getAlim() == Alim.OMNI) {
                         System.out.println("Espero que no sea carne de rata");
                     } else {
                         System.out.println("Yo no puedo comer eso: " + this.getAlim());
@@ -84,7 +94,7 @@ public abstract class Mamifero extends Animal {
                     break;
                 case 4:
                     if (this.getAlim() == Alim.CARNE) {
-                        System.out.println("No me gusta la fruta soy: "+ this.getAlim());
+                        System.out.println("No me gusta la fruta soy: " + this.getAlim());
                     } else {
                         System.out.println("Bua espero que sea una manzana");
                     }
@@ -93,7 +103,7 @@ public abstract class Mamifero extends Animal {
                 default:
                     break;
             }
-
+            System.out.println("--------------");
         }
     }
 
