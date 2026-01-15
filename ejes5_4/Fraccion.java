@@ -1,60 +1,88 @@
 package ejes5_4;
 
-public abstract class Fraccion {
+public class fraccion {
 
-    private double numerador;
-    private double denominador;
+    private int numerador;
+    private int denominador;
 
-    /////////////
+    //
 
-    public Fraccion() {
+    public fraccion() {
 
         denominador = 0;
-        numerador = 0;
+        numerador = 1;
 
     }
 
-    public Fraccion(double d, double n) {
+    public fraccion(int n, int d) {
 
-        denominador = d;
-        numerador = n;
+        denominador = n;
+        numerador = d;
 
     }
 
-    ///////////
+    //
 
-    public double getNumerador() {
+    public int getNumerador() {
         return numerador;
     }
 
-    public void setNumerador(double numerador) {
+    public void setNumerador(int numerador) {
         this.numerador = numerador;
     }
 
-    public double getDenominador() {
+    public int getDenominador() {
         return denominador;
     }
 
-    public void setDenominador(double denominador) {
+    public void setDenominador(int denominador) {
         this.denominador = denominador;
     }
 
-    //////////////////////
-    public void multiplicar() {
-
+    ///
+    public void multiplicar(fraccion f) {
+        int f1 = this.getDenominador() * f.getDenominador();
+        int f2 = this.getNumerador() * f.getNumerador();
+        setDenominador(f1);
+        setNumerador(f2);
     }
 
-    public void dividir() {
-
+    public String dividir(fraccion f) {
+        String f3 = " " + this.getDenominador() * f.getNumerador();
+        f3 += "/" + this.getNumerador() * f.getDenominador();
+        return f3;
     }
 
-    public void simplificar() {
+    public void simplifica() {
+        int a = Math.abs(this.numerador);
+        int b = Math.abs(this.denominador);
+        int resto;
 
+        if (b == 0) {
+            System.out.println("No puede ser el denominador cero");
+            return;
+        }
+
+        while (b != 0) {
+            resto = a % b;
+            a = b;
+            b = resto;
+        }
+
+        this.numerador = this.numerador / a;
+        this.denominador = this.denominador / a;
     }
 
     public void invierte() {
-       numerador n= this.getDenominador();
-      denominador d= this.getNumerador();
+
+        int n = this.getDenominador();
+        this.setDenominador(this.getNumerador());
+        this.setNumerador(n);
+
     }
 
+    public String toString() {
+        String cadena = "\n" + this.getNumerador() + "/" + this.getDenominador();
+        return cadena;
+    }
 }
