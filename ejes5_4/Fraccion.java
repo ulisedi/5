@@ -47,11 +47,18 @@ public class fraccion {
         setNumerador(f2);
     }
 
+
+
+        // Esto con todos to string a todos 
     public String dividir(fraccion f) {
         String f3 = " " + this.getDenominador() * f.getNumerador();
         f3 += "/" + this.getNumerador() * f.getDenominador();
         return f3;
     }
+
+
+
+
 
     public void simplifica() {
         int a = Math.abs(this.numerador);
