@@ -9,7 +9,7 @@ public abstract class Mamifero extends Animal {
     public Mamifero() {
         super();
     }
-    public Mamifero(Sexo s, int e, int p, Alim a) {
+    public Mamifero(Sexo s, double e, double p, Alim a) {
         super(s, e, p, a);
     }
 
@@ -41,14 +41,17 @@ public abstract class Mamifero extends Animal {
                     System.out.println("La eleccion tiene que ser 1/2");
                 }
                 if (eleccion == 1) {
-                    System.out.println("Te diviertes ");
+                    System.out.println("\"Te diviertes\" ");
+                    System.out.println("-");
                 }
                 if (eleccion == 2) {
                     System.out.println("Te pones a jugar con una piedra y te haces daño");
+                    System.out.println("-");
                 }
             }
         } else {
             System.out.println("cojes una piedra y la tiras a un lago, te partes de risa");
+            System.out.println("-");
         }
     }
 
@@ -73,30 +76,38 @@ public abstract class Mamifero extends Animal {
                 case 1:
                     if (this.getAlim() == Alim.CARNE || this.getAlim() == Alim.OMNI) {
                         System.out.println("Comible pero, ¡que asco!");
+                        System.out.println("-");
                     } else {
                         System.out.println("Yo no puedo comer eso soy: " + this.getAlim());
+                        System.out.println("-");
                     }
                     break;
                 case 2:
                     if (this.getAlim() == Alim.CARNE) {
                         System.out.println("Yo no puedo comer eso soy: " + this.getAlim());
+                        System.out.println("-");
                     } else {
 
                         System.out.println("Me flipa el pasto");
+                        System.out.println("-");
                     }
                     break;
                 case 3:
                     if (this.getAlim() == Alim.CARNE || this.getAlim() == Alim.OMNI) {
                         System.out.println("Espero que no sea carne de rata");
+                        System.out.println("-");
                     } else {
                         System.out.println("Yo no puedo comer eso: " + this.getAlim());
+                        System.out.println("-");
                     }
                     break;
                 case 4:
                     if (this.getAlim() == Alim.CARNE) {
                         System.out.println("No me gusta la fruta soy: " + this.getAlim());
+                        System.out.println("-");
                     } else {
                         System.out.println("Bua espero que sea una manzana");
+                        System.out.println("-");
                     }
                     break;
 

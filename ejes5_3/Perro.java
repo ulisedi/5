@@ -6,7 +6,7 @@ public class Perro extends Mamifero {
         super();
     }
 
-    public Perro(Sexo s, int e, int p, Alim a) {
+    public Perro(Sexo s, double e, double p, Alim a) {
         super(s, e, p, a);
     }
 
@@ -14,30 +14,34 @@ public class Perro extends Mamifero {
 
     public void ladra() {
         System.out.println("Bark bark");
+        System.out.println("-");
 
     }
 
     @Override
     public void come() {
         System.out.println("Espero que me des algo de carne ><");
+        System.out.println("-");
     }
 
     public void peleaCon(Perro s) {
-        Sexo sex = this.getSexo();
-        Perro s2 = s;
-        switch (s2.getSexo()) {
+        switch (s.getSexo()) {
             case MACHO:
-                if (sex.equals(s2.getSexo())) {
+                if (this.getSexo().equals(s.getSexo())) {
                     System.out.println("Le voy a reventar");
+                    System.out.println("-");
                 } else {
                     System.out.println("No peleo con Hembras");
+                    System.out.println("-");
                 }
                 break;
              case HEMBRA:
-                if (sex.equals(s2.getSexo())) {
+                if (this.getSexo().equals(s.getSexo())) {
                     System.out.println("La voy a reventar, Sujetame los pendientes");
+                    System.out.println("-");
                 } else {
                     System.out.println("Le voy a reventar");
+                    System.out.println("-");
                 }
                 break;
 

@@ -9,8 +9,8 @@ public abstract class Animal {
         CARNE, PLANTAS, OMNI
     }
 
-    private int peso;
-    private int edad;
+    private double peso;
+    private double edad;
     private Sexo sexo;
     private Alim alim;
 
@@ -27,7 +27,7 @@ public abstract class Animal {
 
     }
 
-    public Animal(Sexo s, int e, int p, Alim a) {
+    public Animal(Sexo s, double e, double p, Alim a) {
         sexo = s;
         edad = e;
         peso = p;
@@ -44,19 +44,19 @@ public abstract class Animal {
         this.alim = alim;
     }
 
-    public int getPeso() {
+    public double getPeso() {
         return peso;
     }
 
-    public void setPeso(int peso) {
+    public void setPeso(double peso) {
         this.peso = peso;
     }
 
-    public int getEdad() {
+    public double getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(double edad) {
         this.edad = edad;
     }
 

@@ -6,21 +6,24 @@ public class Gato extends Mamifero {
         super();
     }
 
-    public Gato(Sexo s, int e, int p, Alim a) {
+    public Gato(Sexo s, double e, double p, Alim a) {
         super(s, e, p, a);
     }
 
     public void maulla(){
         System.out.println("miao miao madafuka");
+        System.out.println("-");
 
     }
     public void arraña(){
         System.out.println("vas a flipar con las cortinas");
+        System.out.println("-");
 
     }
     public void mea(){
         System.out.println("--");
             System.out.println("Bua como me gusta mear porque si ");
+            System.out.println("-");
     }
 
 }
