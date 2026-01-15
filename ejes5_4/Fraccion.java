@@ -16,8 +16,8 @@ public class fraccion {
 
     public fraccion(int n, int d) {
 
-        denominador = n;
-        numerador = d;
+        denominador = d;
+        numerador = n;
 
     }
 
@@ -39,26 +39,23 @@ public class fraccion {
         this.denominador = denominador;
     }
 
-    ///
-    public void multiplicar(fraccion f) {
-        int f1 = this.getDenominador() * f.getDenominador();
-        int f2 = this.getNumerador() * f.getNumerador();
-        setDenominador(f1);
-        setNumerador(f2);
+    //
+    public String multiplica(fraccion f) {
+        // int a = this.getNumerador() * f.getNumerador();
+        // int b = this.getDenominador() * f.getDenominador();
+        // setNumerador(a);
+        // setDenominador(b);
+        return this.getNumerador() * f.getNumerador() + "/" + this.getDenominador() * f.getDenominador();
     }
 
-
-
-        // Esto con todos to string a todos 
-    public String dividir(fraccion f) {
-        String f3 = " " + this.getDenominador() * f.getNumerador();
-        f3 += "/" + this.getNumerador() * f.getDenominador();
-        return f3;
+    // Esto con todos to string a todos
+    public String dividide(fraccion f) {
+        // int a = this.getDenominador() * f.getNumerador();
+        // int b = this.getNumerador() * f.getDenominador();
+        // setNumerador(a);
+        // setDenominador(b);
+        return this.getDenominador() * f.getNumerador() + "/" + this.getNumerador() * f.getDenominador();
     }
-
-
-
-
 
     public void simplifica() {
         int a = Math.abs(this.numerador);
@@ -80,16 +77,16 @@ public class fraccion {
         this.denominador = this.denominador / a;
     }
 
-    public void invierte() {
-
-        int n = this.getDenominador();
-        this.setDenominador(this.getNumerador());
-        this.setNumerador(n);
+    public String invierte() {
+        // int a = this.getDenominador();
+        // int b = this.getNumerador();
+        // setNumerador(a);
+        // setDenominador(b);
+        return this.getDenominador() + "/" + this.getNumerador();
 
     }
 
     public String toString() {
-        String cadena = "\n" + this.getNumerador() + "/" + this.getDenominador();
-        return cadena;
+        return this.getNumerador() + "/" + this.getDenominador();
     }
 }
