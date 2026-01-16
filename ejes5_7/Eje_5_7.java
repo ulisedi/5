@@ -3,12 +3,13 @@ package ejes5_7;
 import java.util.Scanner;
 
 /**
- * crear la calse pizza con las variables tamaño, tipo, estado. con default de
- * estado a pedida. la clase debe almacenar
- * la cantidad de pizzas servidas y pedidas.
+ * 
+ * crear un menu de compra de entradas segun unas zonas especificas y con unas
+ * entradas especificas
  * 
  * @author ECD
- * @input nada
+ * @input de 1-4 para los menus y luego un numero segun las entradas que se
+ *        quieran comprar
  * @output los valores resultado de las opciones
  * 
  * 
@@ -42,10 +43,9 @@ public class Eje_5_7 {
                 case 1:
 
                     System.out.println("--");
-                    System.out.println("Quedan de Principal: "+ principal.getEntradasPorVender());
-                    System.out.println("Quedan de Compra-Venta: "+ compra.getEntradasPorVender());
-                    System.out.println("Quedan de Vip: "+ compra.getEntradasPorVender() );
-                                     
+                    System.out.println("Quedan de Principal: " + principal.getEntradasPorVender());
+                    System.out.println("Quedan de Compra-Venta: " + compra.getEntradasPorVender());
+                    System.out.println("Quedan de Vip: " + compra.getEntradasPorVender());
 
                     break;
                 case 2:
