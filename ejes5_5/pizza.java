@@ -1,26 +1,29 @@
 package ejes5_5;
 
-public class pizza {
+public class Pizza {
 
-  
     private String tamaño;
     private String tipo;
     private String estado;
-    private int pedidas;
-////////////
-    public pizza() {
+    private static int pedidas;
+    private static int servidas;
+
+    ///////
+    public Pizza() {
         tamaño = "mediana";
-        tipo = "mediana";
+        tipo = "margarita";
         estado = "pedida";
-
+        pedidas++;
     }
 
-    public pizza(String t, String ti, String e) {
-        tamaño = t;
-        tipo = ti;
-        estado = e;
+    public Pizza(String t, String ti) {
+        this.tamaño = t;
+        this.tipo = ti;
+        estado = "pedida";
+        pedidas++;
     }
-////////////
+
+    ///////
     public String getTamaño() {
         return tamaño;
     }
@@ -45,12 +48,37 @@ public class pizza {
         this.estado = estado;
     }
 
-    public int getPedidas() {
+    public static int getPedidas() {
         return pedidas;
     }
 
-    public void setPedidas(int pedidas) {
-        this.pedidas = pedidas;
+    public static void setPedidas(int pedidas) {
+        Pizza.pedidas = pedidas;
     }
-///
+
+    public static int getServidas() {
+        return servidas;
+    }
+
+    public static void setServidas(int servidas) {
+        Pizza.servidas = servidas;
+    }
+
+    ////
+    /// 
+    public void sirve() {
+        if (this.estado.equals("pedida")) {
+            setEstado("servido");
+            servidas++;
+        } else {
+            System.out.println("Esta pizza ya ha sido servida");
+        }
+    }
+
+    public String toString() {
+
+        return "Pizza :" + this.getTipo() + "," + this.getTamaño() + "," + this.getEstado();
+
+    }
+
 }

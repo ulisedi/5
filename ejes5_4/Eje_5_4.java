@@ -12,8 +12,8 @@ public class Eje_5_4 {
 
     public static void main(String[] args) {
 
-        fraccion a = new fraccion(4, 6);
-        fraccion b = new fraccion(2, 8);
+        Fraccion a = new Fraccion(4, 6);
+        Fraccion b = new Fraccion(2, 8);
         System.out.println("a: " + a);
         System.out.println("b: " + b);
         System.out.println("Dividida a entre b: " + a.dividide(b));
