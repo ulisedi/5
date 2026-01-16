@@ -40,21 +40,13 @@ public class fraccion {
     }
 
     //
-    public String multiplica(fraccion f) {
-        // int a = this.getNumerador() * f.getNumerador();
-        // int b = this.getDenominador() * f.getDenominador();
-        // setNumerador(a);
-        // setDenominador(b);
-        return this.getNumerador() * f.getNumerador() + "/" + this.getDenominador() * f.getDenominador();
+    public fraccion multiplica(fraccion f) {
+        return new fraccion(this.getNumerador() * f.getNumerador() , this.getDenominador() * f.getDenominador());
     }
 
     // Esto con todos to string a todos
-    public String dividide(fraccion f) {
-        // int a = this.getDenominador() * f.getNumerador();
-        // int b = this.getNumerador() * f.getDenominador();
-        // setNumerador(a);
-        // setDenominador(b);
-        return this.getDenominador() * f.getNumerador() + "/" + this.getNumerador() * f.getDenominador();
+    public fraccion dividide(fraccion f) {
+        return new fraccion(this.getDenominador() * f.getNumerador() , this.getNumerador() * f.getDenominador());
     }
 
     public void simplifica() {
@@ -77,12 +69,12 @@ public class fraccion {
         this.denominador = this.denominador / a;
     }
 
-    public String invierte() {
-        // int a = this.getDenominador();
-        // int b = this.getNumerador();
-        // setNumerador(a);
-        // setDenominador(b);
-        return this.getDenominador() + "/" + this.getNumerador();
+    public fraccion invierte() {
+        int a = this.getDenominador();
+        int b = this.getNumerador();
+        setNumerador(a);
+        setDenominador(b);
+        return new fraccion(a,b);
 
     }
 

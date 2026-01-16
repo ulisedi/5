@@ -1,15 +1,14 @@
 package ejes5_4;
 /**
- * crear las clases Animal mamifero ave gato perro canario pinguino y lagarto, y
- * tres metodos en cada. Luego probarlas
+ * crea fraccion con dos variables numerador y denominador. luego crear algunos metodos
  * 
  * @author ECD
- * @input las opciones del menú y los km que se van a recorrer
+ * @input nada
  * @output los valores resultado de las opciones
  * 
  * 
  */
-public class Eje_5_3 {
+public class Eje_5_4 {
 
     public static void main(String[] args) {
 
