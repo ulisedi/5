@@ -8,7 +8,7 @@ import java.util.Scanner;
  * entradas especificas
  * 
  * @author ECD
- * @input de 1-4 para los menus y luego un numero segun las entradas que se
+ * @input de 1-4 para los menus y luego un numero int según las entradas que se
  *        quieran comprar
  * @output los valores resultado de las opciones
  * 
