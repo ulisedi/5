@@ -12,7 +12,7 @@ package ejes5_13;
  * 
  * 
  */
-public class Eje_5_12 {
+public class Eje_5_13 {
 
     public static void main(String[] args) {
         CuentaCorriente cuenta1 = new CuentaCorriente();
