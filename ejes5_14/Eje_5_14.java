@@ -1,10 +1,17 @@
 package ejes5_14;
 
 /**
- * modificar el ejercicio anterior para que podamos, introduccir tambien una
- * variable, de tipo de tarifa
- * y luego hacer un nuevo metodo de "llamada" para que tambien calcule lo
- * tarifado segun la tarifa del movil.
+ * Implementa la clase FichaDomino. Una ficha de dominó tiene dos lados y en
+ * cada lado hay un número del 1 al 6 o bien ningún número (blanco). Cuando se
+ * crea una ficha, se proporcionan ambos valores. Dos fichas encajan si se
+ * pueden
+ * colocar una al lado de la otra según el juego del dominó, por ejemplo, las
+ * fichas
+ * [ 2 | 5 ] y [ 4 | 5 ] encajan porque se pueden colocar de la forma [ 2 | 5 ]
+ * [ 5 | 4
+ * ]. A continuación se proporciona el contenido del main y el resultado que
+ * debe
+ * aparecer por pantalla.
  * 
  * @author ECD
  * @input nada
@@ -24,7 +31,7 @@ public class Eje_5_14 {
         System.out.println(f3);
         System.out.println(f4);
         // Programación orientada a objetos 203
-       System.out.println(f2.voltea());
+        System.out.println(f2.voltea());
         System.out.println(f2.encaja(f4));
         System.out.println(f1.encaja(f4));
         System.out.println(f1.encaja(f3));

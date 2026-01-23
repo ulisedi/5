@@ -1,10 +1,9 @@
 package ejes5_15;
 
 /**
- * modificar el ejercicio anterior para que podamos, introduccir tambien una
- * variable, de tipo de tarifa
- * y luego hacer un nuevo metodo de "llamada" para que tambien calcule lo
- * tarifado segun la tarifa del movil.
+ * Utiliza la clase anterior para generar una secuencia de 8 fichas creadas de
+ * forma aleatoria, que encajen bien y que estén bien colocadas según el juego
+ * del dominó. No hay que controlar si se repiten o no las fichas.
  * 
  * @author ECD
  * @input nada
@@ -27,7 +26,7 @@ public class Eje_5_15 {
 
         }
         for (int i = 0; i < a1.length; i++) {
-            System.out.print(a1[i]+",");
+            System.out.print(a1[i] + ",");
         }
     }
 
