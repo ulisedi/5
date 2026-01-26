@@ -1,56 +1,28 @@
 package ejes5_2_3;
-
-/**
- * Disco.java
- * Definición de la clase Disco
- * 
- * @author profe
- */
 public class Disco {
-    private String codigo = "LIBRE";
+    private static int codigo;
     private String autor;
     private String titulo;
     private String genero;
-    private int duracion; 
+    private int duracion;
+    private int ccodigo;
 
-    public String getCodigo() {
-        return codigo;
+    public Disco(String t, String g,String a , int d) {
+        ccodigo++;
+        codigo = ccodigo;
+        titulo = t;
+        autor = a;
+        genero = g;
+        duracion = d;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public int getDuracion() {
-        return duracion;
-    }
-
-    public void setDuracion(int duracion) {
-        this.duracion = duracion;
+    public Disco(String t, String g) {
+        ccodigo++;
+        codigo = ccodigo;
+        titulo = t;
+        genero = g;
+        autor= "";
+        duracion=0;
     }
 
     public String toString() {
@@ -59,7 +31,7 @@ public class Disco {
         cadena += "\nAutor: " + this.autor;
         cadena += "\nTítulo: " + this.titulo;
         cadena += "\nGénero: " + this.genero;
-        cadena += "\nDuración: " + this.duracion;
+        cadena += "\nDuración: " + this.duracion+" s";
         cadena += "\n------------------------------------------";
         return cadena;
     }
