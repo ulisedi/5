@@ -1,4 +1,4 @@
-package ejes5_2_3;
+package ejes5_2_4;
 
 public class Disco {
     private int codigo;

@@ -1,4 +1,4 @@
-package ejes5_2_3;
+package ejes5_2_4;
 
 import java.util.Scanner;
 
@@ -57,35 +57,45 @@ public class Eje_5_2_3 {
             switch (d) {
 
                 case 1:
-                    try {
-                        System.out.println("¿Que titulo quieres que tenga?");
-                        n = s.nextLine();
-                        System.out.println("¿Que genero tiene?");
-                        g = s.nextLine();
-                    } catch (Exception e) {
-                        s.nextLine();
-                        continue;
+                    // a) con el siguiente if se comprueba que la cantidad de objetos intanciados no supere 10
+                    if (c < 10) {
+                        try {
+                            System.out.println("¿Que titulo quieres que tenga?");
+                            n = s.nextLine();
+                            System.out.println("¿Que genero tiene?");
+                            g = s.nextLine();
+                        } catch (Exception e) {
+                            s.nextLine();
+                            continue;
+                        }
+                        d1[c] = Disco.crearDsc(n, g);
+                        c++;
+                    } else {
+                        System.out.println("Se ha alcanzado el maximo de discos");
                     }
-                    d1[c] = Disco.crearDsc(n, g);
-                    c++;
                     break;
                 case 2:
-                    try {
-                        System.out.println("¿Que titulo quieres que tenga?");
-                        n = s.nextLine();
-                        System.out.println("¿Que genero tiene?");
-                        g = s.nextLine();
-                        System.out.println("¿Que autor tiene?");
-                        a = s.nextLine();
-                        System.out.println("¿Que duración tiene(s)?");
-                        du = s.nextInt();
-                    } catch (Exception e) {
-                        System.out.println("Error");
-                        s.nextLine();
-                        continue;
+                    // a) con el siguiente if se comprueba que la cantidad de objetos intanciados no supere 10
+                    if (c < 10) {
+                        try {
+                            System.out.println("¿Que titulo quieres que tenga?");
+                            n = s.nextLine();
+                            System.out.println("¿Que genero tiene?");
+                            g = s.nextLine();
+                            System.out.println("¿Que autor tiene?");
+                            a = s.nextLine();
+                            System.out.println("¿Que duración tiene(s)?");
+                            du = s.nextInt();
+                        } catch (Exception e) {
+                            System.out.println("Error");
+                            s.nextLine();
+                            continue;
+                        }
+                        d1[c] = Disco.crearDs(n, g, a, du);
+                        c++;
+                    } else {
+                        System.out.println("Se ha alcanzado el maximo de discos");
                     }
-                    d1[c] = Disco.crearDs(n, g, a, du);
-                    c++;
                     break;
                 case 3:
                     if (c != 0) {
@@ -119,6 +129,7 @@ public class Eje_5_2_3 {
                     }
                     break;
                 case 5:
+
                     if (c != 0) {
                         for (int i = 0; i < c; i++) {
                             System.out.println(d1[i]);
@@ -132,6 +143,7 @@ public class Eje_5_2_3 {
                             s.nextLine();
                             continue;
                         }
+                        // b) si no esta en el rango significa que no existe. lo compruebo con el if
                         if (du > c | du < 0) {
                             System.out.println("Ese disco no Existe");
                         } else {
