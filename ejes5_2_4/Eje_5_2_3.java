@@ -57,17 +57,15 @@ public class Eje_5_2_3 {
             switch (d) {
 
                 case 1:
-                    // a) con el siguiente if se comprueba que la cantidad de objetos intanciados no supere 10
+                    // a) con el siguiente if se comprueba que la cantidad de objetos intanciados no
+                    // supere 10
                     if (c < 10) {
-                        try {
-                            System.out.println("¿Que titulo quieres que tenga?");
-                            n = s.nextLine();
-                            System.out.println("¿Que genero tiene?");
-                            g = s.nextLine();
-                        } catch (Exception e) {
-                            s.nextLine();
-                            continue;
-                        }
+
+                        System.out.println("¿Que titulo quieres que tenga?");
+                        n = s.nextLine();
+                        System.out.println("¿Que genero tiene?");
+                        g = s.nextLine();
+
                         d1[c] = Disco.crearDsc(n, g);
                         c++;
                     } else {
@@ -75,15 +73,17 @@ public class Eje_5_2_3 {
                     }
                     break;
                 case 2:
-                    // a) con el siguiente if se comprueba que la cantidad de objetos intanciados no supere 10
+                    // a) con el siguiente if se comprueba que la cantidad de objetos intanciados no
+                    // supere 10
                     if (c < 10) {
+
+                        System.out.println("¿Que titulo quieres que tenga?");
+                        n = s.nextLine();
+                        System.out.println("¿Que genero tiene?");
+                        g = s.nextLine();
+                        System.out.println("¿Que autor tiene?");
+                        a = s.nextLine();
                         try {
-                            System.out.println("¿Que titulo quieres que tenga?");
-                            n = s.nextLine();
-                            System.out.println("¿Que genero tiene?");
-                            g = s.nextLine();
-                            System.out.println("¿Que autor tiene?");
-                            a = s.nextLine();
                             System.out.println("¿Que duración tiene(s)?");
                             du = s.nextInt();
                         } catch (Exception e) {
@@ -107,7 +107,6 @@ public class Eje_5_2_3 {
                         } catch (Exception e) {
                             System.out.println("Error");
                             s.nextLine();
-                            continue;
                         }
 
                         if (du > c | du < 0) {
@@ -141,7 +140,6 @@ public class Eje_5_2_3 {
                             System.out.println("Error");
                             System.out.println("------");
                             s.nextLine();
-                            continue;
                         }
                         // b) si no esta en el rango significa que no existe. lo compruebo con el if
                         if (du > c | du < 0) {
@@ -163,7 +161,7 @@ public class Eje_5_2_3 {
                             du = s.nextInt();
                         } catch (Exception e) {
                             s.nextLine();
-                            continue;
+
                         }
                         if (du > c | du < 0) {
                             System.out.println("Ese disco no Existe");
@@ -175,7 +173,7 @@ public class Eje_5_2_3 {
                             } catch (Exception e) {
                                 System.out.println("Error");
                                 s.nextLine();
-                                continue;
+
                             }
                             d1[du - 1].setAutor(a);
                         }
@@ -193,7 +191,7 @@ public class Eje_5_2_3 {
                             du = s.nextInt();
                         } catch (Exception e) {
                             s.nextLine();
-                            continue;
+
                         }
                         if (du > c | du < 0) {
                             System.out.println("Ese disco no Existe");
@@ -204,7 +202,7 @@ public class Eje_5_2_3 {
                             } catch (Exception e) {
                                 System.out.println("Error");
                                 s.nextLine();
-                                continue;
+
                             }
                             d1[du - 1].setTitulo(a);
 
@@ -224,7 +222,7 @@ public class Eje_5_2_3 {
                             du = s.nextInt();
                         } catch (Exception e) {
                             s.nextLine();
-                            continue;
+
                         }
                         if (du > c | du < 0) {
                             System.out.println("Ese disco no Existe");
@@ -235,7 +233,7 @@ public class Eje_5_2_3 {
                             } catch (Exception e) {
                                 System.out.println("Error");
                                 s.nextLine();
-                                continue;
+
                             }
                             d1[du - 1].setGenero(a);
                         }
@@ -253,7 +251,9 @@ public class Eje_5_2_3 {
                             du = s.nextInt();
                         } catch (Exception e) {
                             s.nextLine();
+                              System.out.println("Error");
                             continue;
+                          
                         }
                         if (du > c | du < 0) {
                             System.out.println("Ese disco no Existe");
@@ -264,7 +264,7 @@ public class Eje_5_2_3 {
                             } catch (Exception e) {
                                 System.out.println("Error");
                                 s.nextLine();
-                                continue;
+
                             }
                             d1[du - 1].setDuracion(du);
                         }
