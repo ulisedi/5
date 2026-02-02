@@ -1,16 +1,11 @@
 package ejes5_8;
-
 /**
- * 
  * nos dan un main especifico, hay que crear 2 variables el numero (String) y 
  * el tiempo de conversacion (int) si llamamos al metodo "llama" tendra que sumar en los dos 
  * los segundos dados en "llama" y con un formato gracias al toString.
- * 
  * @author ECD
  * @input  nada
  * @output los valores resultado de las opciones pedidas en el ejercicio
- * 
- * 
  */
 public class Eje_5_8 {
 

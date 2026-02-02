@@ -1,19 +1,15 @@
 package ejes5_11;
-
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Locale;
-
 public class TarjetaRegalo {
     private int id;
     private float dinero;
-
     //
     public TarjetaRegalo(float i) {
         dinero = i;
         id = (int) (Math.random() * 1000000);
     }
-
     //
     public int getId() {
         return id;
@@ -30,7 +26,6 @@ public class TarjetaRegalo {
     public void setDinero(float d) {
         this.dinero = d;
     }
-
     //
     public void gasta(double g) {
         if (g > this.getDinero()) {
@@ -42,7 +37,6 @@ public class TarjetaRegalo {
         }
 
     }
-
     public TarjetaRegalo fusionaCon(TarjetaRegalo t) {
         float d1 = this.dinero + t.getDinero();
         this.dinero = 0;
@@ -50,7 +44,6 @@ public class TarjetaRegalo {
 
         return new TarjetaRegalo(d1);
     }
-
     public String toString() {
         Locale locale = new Locale("es", "ES");
         DecimalFormatSymbols symbols = new DecimalFormatSymbols(locale);

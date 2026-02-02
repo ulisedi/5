@@ -3,16 +3,12 @@ package ejes5_7;
 import java.util.Scanner;
 
 /**
- * 
  * crear un menu de compra de entradas segun unas zonas especificas y con unas
  * entradas especificas
- * 
  * @author ECD
  * @input de 1-4 para los menus y luego un numero int según las entradas que se
  *        quieran comprar
- * @output los valores resultado de las opciones
- * 
- * 
+ * @output los valores resultado de las opciones 
  */
 public class Eje_5_7 {
 
@@ -45,7 +41,7 @@ public class Eje_5_7 {
                     System.out.println("--");
                     System.out.println("Quedan de Principal: " + principal.getEntradasPorVender());
                     System.out.println("Quedan de Compra-Venta: " + compra.getEntradasPorVender());
-                    System.out.println("Quedan de Vip: " + compra.getEntradasPorVender());
+                    System.out.println("Quedan de Vip: " + vip.getEntradasPorVender());
 
                     break;
                 case 2:

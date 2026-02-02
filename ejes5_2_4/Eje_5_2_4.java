@@ -11,7 +11,7 @@ import java.util.Scanner;
  * 
  * 
  */
-public class Eje_5_2_3 {
+public class Eje_5_2_4 {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);

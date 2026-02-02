@@ -3,7 +3,7 @@
  * 
  *  @author ECD
  *  @input  nada
- *  @output los metodos que se pide 
+ *  @output la salida de los metodos que se pide 
  * 
  * 
  *  */

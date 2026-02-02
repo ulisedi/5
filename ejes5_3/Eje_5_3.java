@@ -10,8 +10,8 @@ import ejes5_3.Animal.Sexo;
  * tres metodos en cada. Luego probarlas
  * 
  * @author ECD
- * @input las opciones del menú y los km que se van a recorrer
- * @output los valores resultado de las opciones
+ * @input  nada
+ * @output los valores resultado de las funciones usadas
  * 
  * 
  */

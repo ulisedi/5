@@ -85,7 +85,7 @@ public class Eje_5_2 {
                         break;
                 }
             }
-            System.out.println("----------------------------------------------------");
+           
         }
         
         s.close();

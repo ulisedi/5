@@ -2,18 +2,17 @@ package ejes5_2;
 
 public abstract class Vehiculos {
 
-    
     private static int veiculosCreados;
     private static int kmTotales;
     private int kmRecorrido;
-//////////////////////
-public Vehiculos() {
-    this.kmRecorrido = 0;
-    Vehiculos.veiculosCreados++;
-}
 
+    //
+    public Vehiculos() {
+        this.kmRecorrido = 0;
+        Vehiculos.veiculosCreados++;
+    }
 
-////////////////////////
+    //
 
     public static int getVeiculosCreados() {
         return veiculosCreados;
@@ -39,12 +38,11 @@ public Vehiculos() {
         this.kmRecorrido = kmRecorrido;
     }
 
+    //
     public void anda(int km) {
-      
+
         this.kmRecorrido += km;
         Vehiculos.kmTotales += km;
     }
-
-    
 
 }

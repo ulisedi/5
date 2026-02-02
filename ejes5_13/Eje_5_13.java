@@ -1,23 +1,14 @@
 package ejes5_13;
 
 /**
- * Implementa la clase CuentaCorriente. Cada cuenta corriente tiene un número de
- * cuenta de 10
- * dígitos. Para simplificar, el número de cuenta se genera de
- * forma aleatoria cuando se crea una cuenta nueva. La cuenta se puede crear con
- * un saldo inicial; en caso de no especificar saldo, se pondrá a cero
- * inicialmente.
+ * Implementar la clase CuentaCorriente. Cada cuenta corriente tiene un número de
+ * cuenta de 10 dígitos. el número de cuenta se genera de forma aleatoria cuando. La cuenta se puede crear con
+ * un saldo inicial; en caso de no especificar saldo, se pondrá a cero.
  * En una cuenta se pueden hacer ingresos y gastos. También es posible hacer
- * una transferencia entre una cuenta y otra. Se permite el saldo negativo. En
- * el siguiente capítulo se propone un ejercicio como mejora de éste, en el que
- * se
- * pide llevar un registro de los movimientos realizados.
- * 
+ * una transferencia entre una cuenta y otra. Se permite el saldo negativo. 
  * @author ECD
  * @input nada
  * @output los valores resultado de las opciones pedidas en el ejercicio
- * 
- * 
  */
 public class Eje_5_13 {
 

@@ -1,26 +1,16 @@
 package ejes5_4;
-
 public class Fraccion {
-
     private int numerador;
     private int denominador;
-
     //
-
     public Fraccion() {
-
         denominador = 0;
         numerador = 1;
-
     }
-
     public Fraccion(int n, int d) {
-
         denominador = d;
         numerador = n;
-
     }
-
     //
 
     public int getNumerador() {
@@ -38,7 +28,6 @@ public class Fraccion {
     public void setDenominador(int denominador) {
         this.denominador = denominador;
     }
-
     //
     public Fraccion multiplica(Fraccion f) {
         return new Fraccion(this.getNumerador() * f.getNumerador() , this.getDenominador() * f.getDenominador());
@@ -48,7 +37,6 @@ public class Fraccion {
     public Fraccion dividide(Fraccion f) {
         return new Fraccion(this.getDenominador() * f.getNumerador() , this.getNumerador() * f.getDenominador());
     }
-
     public void simplifica() {
         int a = Math.abs(this.numerador);
         int b = Math.abs(this.denominador);
@@ -68,7 +56,6 @@ public class Fraccion {
         this.numerador = this.numerador / a;
         this.denominador = this.denominador / a;
     }
-
     public Fraccion invierte() {
         int a = this.getDenominador();
         int b = this.getNumerador();
@@ -77,7 +64,6 @@ public class Fraccion {
         return new Fraccion(a,b);
 
     }
-
     public String toString() {
         return this.getNumerador() + "/" + this.getDenominador();
     }
