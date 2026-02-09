@@ -3,13 +3,13 @@ package ejes5_2_3;
 import java.util.Scanner;
 
 /**
- * 
+ * Realiza el programa “Colección de discos” por tu cuenta, mirando lo menos
+ * posible el ejemplo que se proporciona. Pruébalo primero para ver cómo
+ * funciona y luego intenta implementarlo tú mismo
  * 
  * @author ECD
  * @input dependiendo de la operacion que se quiera hacer
  * @output los valores resultado de las opciones pedidas en el ejercicio
- * 
- * 
  */
 public class Eje_5_2_3 {
 
@@ -21,8 +21,10 @@ public class Eje_5_2_3 {
         String g = "";
         String a = "";
         int du = 0;
+        boolean f = true;
         Disco[] d1 = new Disco[10];
         do {
+
             System.out.println();
             System.out.println("DISCOS");
             System.out.println("=========");
@@ -70,35 +72,43 @@ public class Eje_5_2_3 {
                     c++;
                     break;
                 case 2:
-                    try {
-                        System.out.println("¿Que titulo quieres que tenga?");
-                        n = s.nextLine();
-                        System.out.println("¿Que genero tiene?");
-                        g = s.nextLine();
-                        System.out.println("¿Que autor tiene?");
-                        a = s.nextLine();
-                        System.out.println("¿Que duración tiene(s)?");
-                        du = s.nextInt();
-                    } catch (Exception e) {
-                        System.out.println("Error");
-                        s.nextLine();
-                        continue;
-                    }
-                    d1[c] = Disco.crearDs(n, g, a, du);
-                    c++;
-                    break;
-                case 3:
-                    if (c != 0) {
-                        System.out.println(
-                                "¿Que número de disco quieres ver? " + "tienes un total de: " + c
-                                        + " Discos introducidos");
+
+                    System.out.println("¿Que titulo quieres que tenga?");
+                    n = s.nextLine();
+                    System.out.println("¿Que genero tiene?");
+                    g = s.nextLine();
+                    System.out.println("¿Que autor tiene?");
+                    a = s.nextLine();
+                    do {
                         try {
+                            System.out.println("¿Que duración tiene(s)?");
                             du = s.nextInt();
                         } catch (Exception e) {
                             System.out.println("Error");
                             s.nextLine();
                             continue;
                         }
+                        f = false;
+                    } while (f);
+
+                    d1[c] = Disco.crearDs(n, g, a, du);
+                    c++;
+                    break;
+                case 3:
+                    if (c != 0) {
+                        do {
+                            System.out.println(
+                                    "¿Que número de disco quieres ver? " + "tienes un total de: " + c
+                                            + " Discos introducidos");
+                            try {
+                                du = s.nextInt();
+                            } catch (Exception e) {
+                                System.out.println("Error");
+                                s.nextLine();
+                                continue;
+                            }
+                            f = false;
+                        } while (f);
 
                         if (du > c | du < 0) {
                             System.out.println("Ese disco no Existe");
@@ -123,15 +133,19 @@ public class Eje_5_2_3 {
                         for (int i = 0; i < c; i++) {
                             System.out.println(d1[i]);
                         }
-                        System.out.println("¿Que Disco quieres borrar?");
-                        try {
-                            du = s.nextInt();
-                        } catch (Exception e) {
-                            System.out.println("Error");
-                            System.out.println("------");
-                            s.nextLine();
-                            continue;
-                        }
+                        do {
+                            System.out.println("¿Que Disco quieres borrar?");
+                            try {
+                                du = s.nextInt();
+                            } catch (Exception e) {
+                                System.out.println("Error");
+                                System.out.println("------");
+                                s.nextLine();
+                                continue;
+                            }
+                            f = false;
+                        } while (f);
+
                         if (du > c | du < 0) {
                             System.out.println("Ese disco no Existe");
                         } else {
@@ -146,17 +160,22 @@ public class Eje_5_2_3 {
                         for (int i = 0; i < c; i++) {
                             System.out.println(d1[i]);
                         }
-                        System.out.println("¿En que disco quieres cambiar el autor?");
-                        try {
-                            du = s.nextInt();
-                        } catch (Exception e) {
-                            s.nextLine();
-                            continue;
-                        }
+                        do {
+                            System.out.println("¿En que disco quieres cambiar el autor?");
+                            try {
+                                du = s.nextInt();
+                            } catch (Exception e) {
+                                s.nextLine();
+                                continue;
+                            }
+                            f = false;
+                        } while (f);
+
                         if (du > c | du < 0) {
                             System.out.println("Ese disco no Existe");
                         } else {
 
+                            s.nextLine();
                             System.out.println("¿a que autor quieres cambiarlo?");
                             try {
                                 a = s.nextLine();
@@ -176,13 +195,18 @@ public class Eje_5_2_3 {
                         for (int i = 0; i < c; i++) {
                             System.out.println(d1[i]);
                         }
-                        System.out.println("¿En que disco quieres cambiar el Titulo?");
-                        try {
-                            du = s.nextInt();
-                        } catch (Exception e) {
+                        do {
                             s.nextLine();
-                            continue;
-                        }
+                            System.out.println("¿En que disco quieres cambiar el Titulo?");
+                            try {
+                                du = s.nextInt();
+                            } catch (Exception e) {
+                                s.nextLine();
+                                continue;
+                            }
+                            f = false;
+                        } while (f);
+
                         if (du > c | du < 0) {
                             System.out.println("Ese disco no Existe");
                         } else {
@@ -207,13 +231,18 @@ public class Eje_5_2_3 {
                         for (int i = 0; i < c; i++) {
                             System.out.println(d1[i]);
                         }
-                        System.out.println("¿En que disco quieres cambiar el genero?");
-                        try {
-                            du = s.nextInt();
-                        } catch (Exception e) {
+                        do {
                             s.nextLine();
-                            continue;
-                        }
+                            System.out.println("¿En que disco quieres cambiar el genero?");
+                            try {
+                                du = s.nextInt();
+                            } catch (Exception e) {
+                                s.nextLine();
+                                continue;
+                            }
+                            f = false;
+                        } while (f);
+
                         if (du > c | du < 0) {
                             System.out.println("Ese disco no Existe");
                         } else {
@@ -236,13 +265,18 @@ public class Eje_5_2_3 {
                         for (int i = 0; i < c; i++) {
                             System.out.println(d1[i]);
                         }
-                        System.out.println("¿En que disco quieres cambiar la Duración?");
-                        try {
-                            du = s.nextInt();
-                        } catch (Exception e) {
+                        do {
                             s.nextLine();
-                            continue;
-                        }
+                            System.out.println("¿En que disco quieres cambiar la Duración?");
+                            try {
+                                du = s.nextInt();
+                            } catch (Exception e) {
+                                s.nextLine();
+                                continue;
+                            }
+                            f = false;
+                        } while (f);
+
                         if (du > c | du < 0) {
                             System.out.println("Ese disco no Existe");
                         } else {
@@ -264,7 +298,7 @@ public class Eje_5_2_3 {
                 default:
                     break;
             }
-
+            f = true;
         } while (d != 10);
         s.nextLine();
         s.close();

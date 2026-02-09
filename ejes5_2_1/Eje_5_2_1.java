@@ -1,24 +1,13 @@
 package ejes5_2_1;
-
 import java.util.Scanner;
-
 /**
- * Una empresa quiere implementar un programa que lleve el control de las
- * incidencias que se producen en sus ordenadores. Cada incidencia tiene un
- * código: 1, 2, 3, 4, etc. Cuando se crea una nueva incidencia, se le asigna
- * un código de forma automática y se pone el estado como “pendiente”. Al
- * crear una incidencia hay que indicar también el número de puesto (un número
- * entero). Cuando se resuelve una incidencia, hay que proporcionar información
- * sobre cómo se ha resuelto o qué es lo que fallaba, además, el estado pasa a
- * “resuelta”. El siguiente trozo de código que va dentro del main genera la
- * salida
- * que se muestra a continuación.
- * 
+ * Utiliza la clase Gato para crear un array de cuatro gatos e introduce los
+ * datos
+ * de cada uno de ellos mediante un bucle. Muestra a continuación los datos de
+ * todos los gatos utilizando también un bucle.
  * @author ECD
- * @input nada
+ * @input el nobre y el sexo de cada gato
  * @output los valores resultado de las opciones pedidas en el ejercicio
- * 
- * 
  */
 public class Eje_5_2_1 {
 
@@ -26,32 +15,35 @@ public class Eje_5_2_1 {
         Scanner s = new Scanner(System.in);
         Gato[] g1 = new Gato[10];
         String ele;
+        Boolean f = true;
         for (int i = 0; i < g1.length; i++) {
+            f = true;
             g1[i] = new Gato();
             System.out.println("Para el gato Nº: " + (i + 1) + " ¿Que nombre tiene?");
-            try {
-                ele = s.nextLine();
-            } catch (Exception e) {
-                System.out.println("Error en el volor introducido");
-                i--;
-                s.nextLine();
-                continue;
-            }
+            ele = s.nextLine();
             g1[i].setNombre(ele);
             System.out.println("¿Y que Sexo? (hembra/macho/ambos)");
-
-            try {
-                ele = s.nextLine();
-            } catch (Exception e) {
-                System.out.println("Error en el volor introducido");
-                i--;
-                s.nextLine();
-                continue;
-            }
-            if (ele.equals("macho")) {
-                g1[i].setSexo(Gato.Sexo.MACHO);
-            } else if (ele.equals("ambos")) {
-                g1[i].setSexo(Gato.Sexo.AMBOS);
+            while (f) {
+                try {
+                    ele = s.nextLine();
+                } catch (Exception e) {
+                    System.out.println("Error en el volor introducido");
+                    i--;
+                    s.nextLine();
+                    continue;
+                }
+                if (ele.equals("macho")) {
+                    g1[i].setSexo(Gato.Sexo.MACHO);
+                    f = false;
+                } else if (ele.equals("ambos")) {
+                    g1[i].setSexo(Gato.Sexo.AMBOS);
+                    f = false;
+                } else if (ele.equals("hembra")) {
+                    g1[i].setSexo(Gato.Sexo.HEMBRA);
+                    f = false;
+                } else {
+                    System.out.println("Tiene que ser (hembra/macho/ambos)");
+                }
             }
 
         }
